@@ -31,8 +31,6 @@ const AnonymousButton = (
   </svg>
 );
 
-let userProfileData;
-
 const SignIn = () => {
   const navigate = useNavigate();
 
