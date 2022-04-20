@@ -1,0 +1,37 @@
+
+.sign-in-container {
+    padding: 5vw;
+   display: flex;
+   align-items: center;
+}
+
+.login-heading{
+   font-size: 32px;
+}
+.sing-in-form {
+    width: 400px; 
+    height: 300px; 
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 24px;
+    background-color: #cc7dbf;
+    border-radius: 5px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+
+}
+
+/* changing background color of button */
+
+.ant-btn-primary{
+    border-color: #d6bd61;
+    background: #d6bd61;
+    width: 300px;
+    height: 45px;
+    margin: 10px 0px;
+}
+
+.ant-btn-primary:hover {
+    background: #767bf0;
+    border-color: #767bf0;
+}

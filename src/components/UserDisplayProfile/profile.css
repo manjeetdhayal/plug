@@ -1,0 +1,26 @@
+.ant-card-body {
+    padding-bottom: 0px;
+}
+.ant-card-actions {
+    margin-top: 24px; 
+}
+
+.ant-card-actions > div:not(:last-child) {
+    border-right: 1px solid #f0f0f0;
+}
+
+.ant-card-actions > div {
+    float: left;
+    margin: 12px 0; 
+    color: rgba(0, 0, 0, 0.45);
+    text-align: center;
+}
+
+.anticon{
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.anticon:hover {
+    color: #1890ff;
+}

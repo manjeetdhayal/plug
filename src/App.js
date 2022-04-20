@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "antd/dist/antd.min.css";
+import SignIn from "./components/signin/signin";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import UserProfile from "./components/Profile/profile";
+import AnonymousUserProfile from "./components/Profile/AnonymousProfile";
+import UserProfiles from "./components/UserProfiles/userprofiles";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Router>
+        <Routes>
+          <Route path="/" element={<SignIn />} />
+          <Route exact path="/" element={<SignIn />} />
+          <Route exact path="/user" element={<UserProfile />} />
+          <Route
+            exact
+            path="/anonymousUser"
+            element={<AnonymousUserProfile />}
+          />
+
+          <Route exact path="/userprofiles" element={<UserProfiles />} />
+        </Routes>
+      </Router>
     </div>
   );
-}
+};
 
 export default App;
