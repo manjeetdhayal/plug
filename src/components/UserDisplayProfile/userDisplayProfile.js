@@ -45,7 +45,7 @@ const UserDisplayProfile = (props) => {
             <Card
               hoverable
               style={{ width: 300, marginTop: 16 }}
-              onChange={props.loading}
+              loading={props.loading}
             >
               <Meta
                 avatar={

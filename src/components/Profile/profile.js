@@ -7,6 +7,7 @@ import { setUser } from "../../firebase/userSlice";
 
 const UserProfile = () => {
   const [userData, setUserData] = useState({});
+  const [loading, setLoading] = useState(false);
   const [like, setLike] = useState(null);
   const [dislike, setDislike] = useState(null);
   const [status, setStatus] = useState("Hey I am using Plug App!!");
@@ -41,6 +42,7 @@ const UserProfile = () => {
         // console.log(res); //working
         setUserData(res);
         dispatch(setUser(res));
+        setLoading(true);
       });
 
     // console.log(res); working
@@ -49,7 +51,7 @@ const UserProfile = () => {
   }, []);
   return (
     <>
-      <UserDisplayProfile user={userData} />
+      <UserDisplayProfile user={userData} loading={loading} />
     </>
   );
 };

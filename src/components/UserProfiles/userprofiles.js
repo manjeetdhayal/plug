@@ -1,8 +1,6 @@
 import { getDatabase, ref, onValue } from "firebase/database";
 import React, { useEffect, useState } from "react";
 import { Card, Row, Col, Avatar, Layout } from "antd";
-import { getAuth } from "firebase/auth";
-import { getUserDocument } from "../../firebase/firebase";
 
 import { selectUser } from "../../firebase/userSlice";
 import { useSelector } from "react-redux";
