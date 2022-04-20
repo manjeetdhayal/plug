@@ -7,7 +7,6 @@ import { setUser } from "../../firebase/userSlice";
 const AnonymousUserProfile = () => {
   const [userData, setUserData] = useState({});
   const dispatch = useDispatch();
-  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const auth = getAuth();
@@ -42,13 +41,12 @@ const AnonymousUserProfile = () => {
       .then((res) => {
         setUserData(res);
         dispatch(setUser(res));
-        setLoading(true);
       });
   }, []);
 
   return (
     <>
-      <UserDisplayProfile user={userData} lodaing={loading} />
+      <UserDisplayProfile user={userData} />
     </>
   );
 };

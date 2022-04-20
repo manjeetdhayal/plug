@@ -42,11 +42,7 @@ const UserDisplayProfile = (props) => {
       >
         <div className="block featureBlock bgGray">
           <div className="container-fluid">
-            <Card
-              hoverable
-              style={{ width: 300, marginTop: 16 }}
-              loading={props.loading}
-            >
+            <Card hoverable style={{ width: 300, marginTop: 16 }}>
               <Meta
                 avatar={
                   <Avatar
