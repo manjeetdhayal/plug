@@ -57,7 +57,7 @@ const LikeButton = (props) => {
         onClick={handleClick}
         style={likedStatus ? { color: "#3fd75dc2" } : { color: "currentColor" }}
       />
-      {props.like != 0 && <span>{props.like}</span>}
+      {props.like !== 0 && <span>{props.like}</span>}
     </span>
   );
 };

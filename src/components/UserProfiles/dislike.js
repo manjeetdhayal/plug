@@ -58,7 +58,7 @@ const DisLikeButton = (props) => {
         key={props.profileUid}
         onClick={handleClick}
       />
-      {props.dislike != 0 && <span>{props.dislike}</span>}
+      {props.dislike !== 0 && <span>{props.dislike}</span>}
     </span>
   );
 };

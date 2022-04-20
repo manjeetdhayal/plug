@@ -39,7 +39,7 @@ async function generateUserDocument(user) {
       if (!snapshot.exists()) {
         const { email, displayName, photoURL } = user;
 
-        if (email != undefined) {
+        if (email !== undefined) {
           set(ref(db, "users/" + user.uid), {
             uid: user.uid,
             username: displayName,
